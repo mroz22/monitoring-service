@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/config/test.js"
+  ],
+  "setupTestFrameworkScriptFile": "./setup-tests.js"
+}

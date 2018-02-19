@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  monitoring-service:
+    build: ./monitoring_service
+    command: ["./wait-for-it.sh", "db:3306", "--", "nodemon", "index.js"]
+    container_name: monitoring_service
+    volumes:
+      - ./monitoring_service:/var/www/app/current
+    ports:
+     - "3000:3000"
+    environment:
+     - DB_HOSTNAME=db
+    depends_on:
+     - db
+  db:
+    build: ./mysql
+    container_name: db
+    ports:
+    - "3305:3306"
