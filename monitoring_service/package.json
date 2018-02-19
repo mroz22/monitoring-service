@@ -1,5 +1,5 @@
 {
-  "name": "applifting",
+  "name": "monitoring-service",
   "version": "0.0.0",
   "description": "",
   "author": "Martin Varmuza <mvarmuza@gmail.com>",
@@ -7,7 +7,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/mroz22/monitoring-service"
   },
   "scripts": {
     "start": "node index.js",

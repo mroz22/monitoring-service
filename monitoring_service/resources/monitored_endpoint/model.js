@@ -22,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     dateOfLastCheck: {
       type: DataTypes.DATE,
-      // isDate: {
-      //   msg: 'must be of Date type',
-      // },
+      isDate: {
+        msg: 'must be of Date type',
+      },
     },
     monitoredInterval: {
       type: DataTypes.INTEGER.UNSIGNED,

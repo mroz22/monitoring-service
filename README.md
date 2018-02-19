@@ -77,6 +77,16 @@ x-access-token: 93f39e2f-80de-4033-99ee-249d92736a2
 
 ### monitored-endpoint
 
+Simplified model
+```
+{
+    name: <string>,
+    dateOfLastCheck: <date>,
+    monitoredInterval: <int | required | default: 300>,
+    url: <string | required>,
+}
+
+```
 | Route         | Method        | Result|
 | ------------- |---------------| ------|
 | v1/monitored-endpoints | GET | fetch all  |
