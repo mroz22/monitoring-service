@@ -15,6 +15,11 @@ module.exports = (sequelize, DataTypes) => sequelize.define('User', {
   type: {
     type: DataTypes.INTEGER,
     defaultValue: 1,
-    // todo: enum
+    validate: {
+      isIn: {
+        args: [[1, 10]],
+        msg: 'Must be proper user type',
+      },
+    },
   },
 });
