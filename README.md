@@ -1,6 +1,7 @@
 # monitoring-service
 A simple service that allows you to monitor remote endpoints and list results. 
 Monitored endpoints are expected to return their **payloads as JSON.**
+
 ## requirements 
 docker v 17.04.0+. to check version, run 
 ```
@@ -32,23 +33,26 @@ To accomplish this run:
 $ docker-compose up -d 
 ```
 
-Now you can run npm scripts defined on monitoring-service:
+To get an interactive prompt, you can run  
 
 ```
-$ docker-compose run monitoring-service npm run <script>
+$ docker-compose exec monitoring-service sh
 ```
 
-To run tests run this command:
+Voilá, npm commands are now accessible. 
+
+
+To seed development database run:
 
 ```
-$ docker-compose run monitoring-service npm run test
+$ npm run seed
 ```
 
-To seed monitoring-service database run:
+To run tests: 
+```
+$ npm run test
+```
 
-```
-$ docker-compose run monitoring-service npm run seed
-```
 
 ## API
 
